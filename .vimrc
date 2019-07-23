@@ -190,6 +190,9 @@ set tm=500
 "This unsets the "last search pattern" register by hitting return
 nnoremap <cr> :noh<cr><cr>
 
+" turn off ctrl-c in insert mode
+inoremap <C-c> <Nop>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -216,7 +219,7 @@ endif
 set encoding=utf8
 
 " Use Unix as the standard file type
-set ffs=dos,unix,mac
+set ffs=unix,dos,mac
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
