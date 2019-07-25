@@ -25,3 +25,6 @@ else
   echo ".fileinit -- adding origin remote"
   config remote add origin $ORIGIN_URL
 fi
+
+config fetch
+config branch -u origin/master
