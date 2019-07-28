@@ -1,5 +1,5 @@
 #!/bin/zsh
-ALIAS_CMD="alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'"
+ALIAS_CMD="alias config='/usr/bin/git --git-dir=\$HOME/.cfg/ --work-tree=\$HOME'"
 PROFILE="$HOME/.zshrc"
 
 echo ".fileinit -- using alias cmd $ALIAS_CMD"
@@ -13,7 +13,7 @@ config config --local status.showUntrackedFiles no && echo ".fileinit -- hiding 
 config config --local alias.update 'add -u' && echo ".fileinit -- added config update = config add -u alias"
 
 if ! grep -q "$ALIAS_CMD" "$PROFILE" ; then
-  echo $ALIAS_CMD >> $HOME/.zshrc && echo ".fileinit -- added alias";
+  echo $ALIAS_CMD >> $PROFILE && echo ".fileinit -- added alias";
 fi
 
 ORIGIN_URL="git@github.com:granjef3/dotfiles.git"
