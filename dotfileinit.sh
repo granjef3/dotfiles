@@ -16,7 +16,7 @@ if ! grep -q "$ALIAS_CMD" "$PROFILE" ; then
   echo $ALIAS_CMD >> $PROFILE && echo ".fileinit -- added alias";
 fi
 
-ORIGIN_URL="git@github.com:granjef3/dotfiles.git"
+ORIGIN_URL="git@github.com:xortive/dotfiles.git"
 
 if config remote | grep -wq origin ; then
   echo ".fileinit -- updating origin remote since already exists..."
